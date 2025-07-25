@@ -18,6 +18,7 @@ export enum ChainId {
   KatanaMainnet = 747474,
   TacMainnet = 239,
   LiskMainnet = 1135,
+  HyperEVMMainnet = 999,
 }
 
 export interface ChainMetadata {
@@ -182,6 +183,13 @@ export namespace ChainUtils {
       nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
       explorerUrl: "https://blockscout.lisk.com",
       identifier: "lisk",
+    },
+    [ChainId.HyperEVMMainnet]: {
+      name: "HyperEVM",
+      id: ChainId.HyperEVMMainnet,
+      nativeCurrency: { name: "Ether", symbol: "ETH", decimals: 18 },
+      explorerUrl: "https://www.hyperscan.com/",
+      identifier: "hyperliquid",
     },
   };
 }
